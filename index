@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Базова HTML-сторінка</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/w3.css">
+    <script src="scripts/script.js"></script>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            max-width: 150px;
+            width: 20%; 
+            height: auto;
+            max-height: 150px;
+            object-fit: cover;
+            object-fit: cover;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="button" id="li1" href="#">Головна</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#cutaty">Цитати</a></li>
+                <li><a href="#anonsu">Анонси</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <div class="banner-content">
+            <h1 id="h1">Ласкаво просимо на наш сайт!</h1>
+            <h1 ad="h1">Вас вітає головний амбасадор нашого сайту !</h1>
+            <p>P.S але це секрет</p>
+        </div>
+        <img src="images/banner_stethem.jpeg" alt="Банер з зображенням">
+    </section>
+    
+    <main>
+        <section>
+            <h2>Про сайт</h2>
+            <p>Цей сайт створений у підтримку великої людини, яка досягла багато успіхів у 
+            кіноматогрофі але також здобула велику популярніть серед великої аудиторії за 
+            допомогою своїх дуже відомих цитат. Якщо Ви на цьому сайті, то нам не потрібно 
+            більш детально розповідати що тут коїться</p>
+            
+            <h3>Чому саме ми:</h3>
+            <ul>
+                <li>Тільки актуальна інформація про усі анонси</li>
+                <li>Актуальні цитати</li>
+                <li>Взаємо зв'язок та жива розмова 24/7</li>
+            </ul>
+        </section>
+
+        <!-- Строчні елементи -->
+        <section>
+            <h2>Додаткові ресурси</h2>
+            <p>Відвідайте <a href="https://www.instagram.com/jasonstatham/?hl=ru" target="_blank">Instagram</a></p>
+            <h2>ВЖЕ СКОРО У КІНО:</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zTbgNC42Ops?si=1uz764SNgrWphQFh" 
+            title="YouTube video player" frameborder="0" allow=
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <!-- Gallery -->
+         
+        <section id="gallery" aria-labelledby="gallery-title">
+            <script>
+                const imageFolder = "images/gallery/";
+                const imageFiles = [];
+                for (let i = 1; i <= 10; i++) {
+                    imageFiles.push(`${i}.jpg`);
+                }
+
+
+                const gallery = document.getElementById('gallery');
+        
+                imageFiles.forEach(fileName => {
+                    const img = document.createElement('img');
+                    img.src = imageFolder + fileName; 
+                    img.alt = `Изображение ${fileName}`; 
+                    gallery.appendChild(img); 
+                });
+            </script>
+        </section>
+
+        <!-- cutaty -->
+        <section id="cutaty" aria-labelledby="cutaty-title">
+            <h2 id="cutaty-title">Цитати</h2>
+            <article>
+                <li>"Если ты не можешь решить проблему кулаком, значит, ты недостаточно старался."</li>
+
+                <li>"Я не бегаю за проблемами, они сами меня находят."</li>
+
+                <li>"Мой утренний кофе крепче, чем твои аргументы."</li>
+
+                <li>"Когда я захожу в комнату, даже тишина становится громче."</li>
+
+                <li>"Я не ищу неприятностей, но они всегда находят меня."</li>
+
+                <li>"Мой стиль — это скорость, сила и немного сарказма."</li>
+
+                <li>"Если ты видишь меня в костюме, значит, кто-то уже проиграл."</li>
+
+                <li>"Я не герой, я просто парень, который делает свою работу."</li>
+
+                <li>"Моя улыбка — это предупреждение, а не приглашение."</li>
+
+                <li>"Я не боюсь высоты, я боюсь скуки."</li>
+
+                <li>"Если ты думаешь, что можешь меня остановить, подумай ещё раз."</li>
+
+                <li>"Моя машина быстрее, чем твои мысли."</li>
+
+                <li>"Я не использую GPS, я просто знаю, куда ехать."</li>
+
+                <li>"Если ты видишь меня с зонтом, значит, шторм уже начался."</li>
+
+                <li>"Я не ломаю правила, я их переписываю."</li>
+
+                <li>"Моя тень весит больше, чем твои амбиции."</li>
+
+                <li>"Я не тренируюсь, я просто живу на максимуме."</li>
+
+                <li>"Если ты хочешь мира, готовься к войне... или к гонке."</li>
+
+                <li>"Мой день начинается с адреналина и заканчивается победой."</li>
+
+                <li>"Я не верю в удачу, я верю в подготовку."</li>
+
+                <li>"Если ты видишь меня с улыбкой, значит, кто-то уже проиграл."</li>
+
+                <li>"Моя жизнь — это экшн-фильм без дублёров."</li>
+
+                <li>"Я не боюсь проигрывать, я боюсь не попробовать."</li>
+
+                <li>"Если ты хочешь быть лучшим, будь готов к худшему."</li>
+
+                <li>"Моя философия проста: меньше слов, больше действий."</li>
+
+                <li>"Я не жду шанса, я его создаю."</li>
+
+                <li>"Если ты видишь меня в баре, значит, кто-то уже упал."</li>
+
+                <li>"Моя сила — это не мышцы, а решимость."</li>
+
+                <li>"Я не герой, но я всегда на шаг впереди."</li>
+
+                <li>"Если ты хочешь узнать, что такое страх, попробуй меня остановить."</li>
+                
+            </article>
+            
+        </section>
+
+        <!-- anonsu -->
+        <selection id="anonsu" aria-labelledby="anonsu">
+            <h2 id="cutaty-title">Анонси</h2>
+            <p>Пока что нету(( </p>
+        </selection>
+
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2025, Створено для навчання</p>
+    </footer>
+</body>
+</html>
